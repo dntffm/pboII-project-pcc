@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="576.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <VBox prefHeight="576.0" prefWidth="499.0" style="-fx-background-color: WHITE;">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="499.0">
+               <children>
+                  <Button fx:id="btnClose" mnemonicParsing="false" onAction="#handleClick" prefHeight="27.0" prefWidth="24.0" styleClass="close-button" stylesheets="@../assets/css/style.css" text="X">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="4.0" top="4.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="24.0" styleClass="minimize-button" stylesheets="@../assets/css/style.css" text="_">
+                     <HBox.margin>
+                        <Insets left="4.0" top="4.0" />
+                     </HBox.margin></Button>
+               </children></HBox>
+            <AnchorPane prefHeight="533.0" prefWidth="499.0" stylesheets="@../assets/css/style.css">
+               <children>
+                  <TextField fx:id="txtareaUsername" layoutX="112.0" layoutY="95.0" prefHeight="49.0" prefWidth="275.0" promptText="Username" styleClass="input-area" stylesheets="@../assets/css/style.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="txtareaPassword" layoutX="112.0" layoutY="164.0" prefHeight="49.0" prefWidth="275.0" promptText="Password" styleClass="input-area" stylesheets="@../assets/css/style.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="btnLogin" layoutX="136.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="228.0" stylesheets="@../assets/css/style.css" text="Login">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="217.0" layoutY="363.0" text="PLN Persero" textFill="WHITE" />
+                  <Label layoutX="237.0" layoutY="314.0" text="Atau" textFill="#575252" />
+                  <Button fx:id="btnDaftar" layoutX="136.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="228.0" style="-fx-background-color: #40785e;" styleClass="button-success" stylesheets="@../assets/css/style.css" text="Daftar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <ImageView fitHeight="69.0" fitWidth="65.0" layoutX="218.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/icons8_delete_50px.png" />
+                     </image></ImageView>
+                  <Label layoutX="218.0" layoutY="495.0" text="PLN Persero" textFill="#515151" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

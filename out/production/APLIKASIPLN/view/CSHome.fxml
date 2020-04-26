@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+    <children>
+        <VBox prefHeight="576.0" prefWidth="269.0" style="-fx-background-color: #204051;">
+            <children>
+                <Pane prefHeight="34.0" prefWidth="270.0">
+                    <children>
+                        <HBox layoutY="3.0" prefHeight="34.0" prefWidth="147.0">
+                            <children>
+                                <Button fx:id="clsBtn" mnemonicParsing="false" onAction="#handleClick" prefHeight="27.0" prefWidth="24.0" styleClass="close-button" stylesheets="@../assets/css/style.css" text="X" textFill="#fafafa">
+                           <HBox.margin>
+                              <Insets left="4.0" top="4.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button fx:id="clsBtn1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="27.0" prefWidth="24.0" styleClass="minimize-button" stylesheets="@../assets/css/style.css" text="_" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+                <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/img/icons8_male_user_100px.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="83.0" top="26.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label text="Username" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets left="98.0" top="9.0" />
+                    </VBox.margin>
+                </Label>
+                <Label text="PLN Customer Care (CS)" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="6.0" top="11.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Dashboard" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_content_100px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnNotifikasi" alignment="BASELINE_LEFT" graphicTextGap="24.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Notifikasi" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_answers_100px_1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding></Button>
+                <Button fx:id="btnPasangBaru" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Daftar Ajuan Pasang Baru" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_new_view_100px_1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding></Button>
+                <Button fx:id="btnPenyesuaianDaya" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Penyesuaian Daya Listrik" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_adjustment_100px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding></Button>
+                <Button fx:id="btnReportGangguan" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Daftar Laporan Gangguan" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_report_card_100px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            <Button fx:id="btnReportGangguan1" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Log Out" textAlignment="JUSTIFY" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/icons8_logout_rounded_up_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            </children>
+        </VBox>
+        <StackPane layoutX="270.0" prefHeight="576.0" prefWidth="780.0">
+            <children>
+                <Pane fx:id="paneNotifikasi" prefHeight="576.0" prefWidth="541.0" style="-fx-background-color: white;">
+                    <children>
+                        <ScrollPane layoutX="43.0" layoutY="147.0" prefHeight="372.0" prefWidth="696.0">
+                            <content>
+                                <VBox fx:id="vbPanelNotif" prefHeight="415.0" prefWidth="710.0" />
+                            </content>
+                        </ScrollPane>
+                        <Label layoutX="64.0" layoutY="117.0" text="Tanggal" />
+                        <Label layoutX="231.0" layoutY="117.0" text="Pesan" />
+                        <Label layoutX="50.0" layoutY="30.0" text="Notifikasi" textFill="#7f7d7d">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </children></Pane>
+                <Pane fx:id="panePenyesuaianDaya" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="27.0" layoutY="41.0" text="Ajuan Penyesuaian Daya" textFill="#616161">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                    </children></Pane>
+                <Pane fx:id="paneDashboard" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="38.0" text="Dashboard" textFill="#8a8383">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                    </children></Pane>
+                <Pane fx:id="paneReportGangguan" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="25.0" layoutY="41.0" text="Daftar Laporan Gangguan" textFill="#716d6d">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                  <TableView layoutX="25.0" layoutY="124.0" prefHeight="399.0" prefWidth="707.0">
+                    <columns>
+                      <TableColumn prefWidth="41.199981689453125" text="#" />
+                      <TableColumn prefWidth="109.20001220703125" text="Tanggal" />
+                        <TableColumn prefWidth="75.0" text="ID. Pelapor" />
+                        <TableColumn prefWidth="329.20001220703125" text="Deskripsi Laporan" />
+                    </columns>
+                  </TableView>
+                    </children></Pane>
+                <Pane fx:id="panePasangBaru" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="22.0" layoutY="39.0" text="Ajuan Pasang Baru" textFill="#797575">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                  <TableView layoutX="22.0" layoutY="113.0" prefHeight="424.0" prefWidth="718.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="#" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                    </children></Pane>
+            </children></StackPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TeknisiController">
+    <children>
+        <VBox prefHeight="576.0" prefWidth="269.0" style="-fx-background-color: #204051;">
+            <children>
+                <Pane prefHeight="34.0" prefWidth="270.0">
+                    <children>
+                        <HBox layoutY="3.0" prefHeight="34.0" prefWidth="147.0">
+                            <children>
+                                <Button fx:id="clsBtn" mnemonicParsing="false" onAction="#handleClick" prefHeight="27.0" prefWidth="24.0" styleClass="close-button" stylesheets="@../assets/css/style.css" text="X" textFill="#fafafa">
+                                    <HBox.margin>
+                                        <Insets left="4.0" top="4.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font></Button>
+                                <Button fx:id="clsBtn1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="27.0" prefWidth="24.0" styleClass="minimize-button" stylesheets="@../assets/css/style.css" text="_" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="4.0" top="4.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+                <ImageView fitHeight="90.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/img/icons8_male_user_100px.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="83.0" top="26.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label text="Username" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets left="98.0" top="9.0" />
+                    </VBox.margin>
+                </Label>
+                <Label text="PLN Customer Care (Teknisi)" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="6.0" top="11.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Dashboard" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_content_100px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnPelayanan" alignment="BASELINE_LEFT" graphicTextGap="24.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Pelayanan" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_answers_100px_1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding></Button>
+                <Button fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="24.0" layoutX="10.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="53.0" prefWidth="269.0" stylesheets="@../assets/css/style.css" text="Log Out" textAlignment="JUSTIFY" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/img/icons8_logout_rounded_up_100px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+        <StackPane layoutX="270.0" prefHeight="576.0" prefWidth="780.0">
+            <children>
+                <Pane fx:id="panePelayanan" prefHeight="576.0" prefWidth="541.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="30.0" text="Pelayanan" textFill="#7f7d7d">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                  <Pagination layoutX="50.0" layoutY="88.0" prefHeight="471.0" prefWidth="696.0" />
+                  <TableView layoutX="50.0" layoutY="70.0" prefHeight="439.0" prefWidth="681.0" style="-fx-background-color: white; -fx-border-color: #353535;">
+                     <columns>
+                        <TableColumn prefWidth="43.199981689453125" style="-fx-background-color: white;" text="#" />
+                        <TableColumn prefWidth="137.20001220703125" style="-fx-background-color: white;" text="Jenis Pelayanan" />
+                        <TableColumn prefWidth="201.79998779296875" style="-fx-background-color: white;" text="ID. Pelayanan" />
+                        <TableColumn prefWidth="296.59991455078125" style="-fx-background-color: white;" text="Status" />
+                     </columns>
+                  </TableView>
+                    </children></Pane>
+                <Pane fx:id="paneDashboard" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="38.0" text="Dashboard" textFill="#8a8383">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                  <GridPane layoutX="62.0" layoutY="88.0" prefHeight="272.0" prefWidth="610.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f75f54;">
+                           <children>
+                              <Label layoutX="139.0" layoutY="31.0" text="3 Pekerjaan Baru" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="90.0" prefWidth="307.0" style="-fx-background-color: #e6ca5c;" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutX="164.0" layoutY="14.0" text="19 Pekerjaan" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="52.0" layoutY="45.0" text="Terselesaikan Di Bulan Ini" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                    </children></Pane>
+            </children></StackPane>
+    </children>
+</AnchorPane>

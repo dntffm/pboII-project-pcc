@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="700.0" style="-fx-background-color: #454545; -fx-border-radius: 10; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="20-12-2020" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" top="13.0" />
+         </HBox.margin>
+      </Label>
+      <Label layoutX="20.0" layoutY="23.0" text="Pemadaman Sebagian kota Jember Mulai jam 16:00 - 20:00 WIB" textFill="WHITE">
+         <HBox.margin>
+            <Insets left="16.0" top="13.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>
