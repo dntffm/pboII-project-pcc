@@ -70,6 +70,17 @@ public class CSController {
             stage.close();
         } else if (event.getSource() == btnLogout){
             Helper.changePage(event,"login");
+        } else if(event.getSource() == btnDashboard) {
+            paneDashboard.toFront();
+        } else if(event.getSource() == btnNotifikasi) {
+            paneNotifikasi.toFront();
+        } else if(event.getSource() == btnPasangBaru) {
+            panePasangBaru.toFront();
+
+        } else if(event.getSource() == btnPenyesuaianDaya){
+            panePenyesuaianDaya.toFront();
+        } else if(event.getSource() == btnReportGangguan) {
+            paneReportGangguan.toFront();
         }
     }
 

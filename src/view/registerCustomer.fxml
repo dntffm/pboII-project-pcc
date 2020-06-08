@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="474.0" prefWidth="450.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterCustomerController">
    <children>
-      <VBox layoutX="129.0" prefHeight="397.0" prefWidth="192.0">
+      <VBox fx:id="vboxRegister" layoutX="105.0" prefHeight="458.0" prefWidth="239.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="194.0" text="Register">
                <VBox.margin>
@@ -24,7 +24,7 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="fieldNamaLengkap" layoutX="10.0" layoutY="55.0" prefHeight="35.0" prefWidth="192.0" promptText="Nama Lengkap" styleClass="input-area" stylesheets="@../assets/css/style.css">
+            <TextField fx:id="fieldNamaLengkap" layoutX="10.0" layoutY="55.0" prefHeight="41.0" prefWidth="239.0" promptText="Nama Lengkap" styleClass="input-area" stylesheets="@../assets/css/style.css">
                <VBox.margin>
                   <Insets bottom="4.0" />
                </VBox.margin></TextField>
@@ -32,15 +32,21 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="fieldUserName" layoutX="10.0" layoutY="98.0" prefHeight="35.0" prefWidth="192.0" promptText="Username" styleClass="input-area" stylesheets="@../assets/css/style.css">
+            <TextField fx:id="fieldUserName" layoutX="10.0" layoutY="98.0" prefHeight="44.0" prefWidth="239.0" promptText="Username" styleClass="input-area" stylesheets="@../assets/css/style.css">
                <VBox.margin>
                   <Insets bottom="4.0" />
                </VBox.margin></TextField>
+            <Label layoutX="10.0" layoutY="132.0" text="Email">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fieldEmail" layoutX="10.0" layoutY="150.0" prefHeight="44.0" prefWidth="239.0" promptText="Email" styleClass="input-area" stylesheets="@../assets/css/style.css" />
             <Label layoutX="10.0" layoutY="124.0" text="Password">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <PasswordField fx:id="fieldPasswd" prefHeight="35.0" prefWidth="192.0" promptText="Password" styleClass="input-area" stylesheets="@../assets/css/style.css">
+            <PasswordField fx:id="fieldPasswd" prefHeight="43.0" prefWidth="239.0" promptText="Password" styleClass="input-area" stylesheets="@../assets/css/style.css">
                <VBox.margin>
                   <Insets bottom="4.0" />
                </VBox.margin></PasswordField>
@@ -48,18 +54,18 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <PasswordField fx:id="fieldKonfirmasi" layoutX="10.0" layoutY="184.0" prefHeight="35.0" prefWidth="192.0" promptText="Konfirmasi Password" styleClass="input-area" stylesheets="@../assets/css/style.css">
+            <PasswordField fx:id="fieldKonfirmasi" layoutX="10.0" layoutY="184.0" prefHeight="42.0" prefWidth="239.0" promptText="Konfirmasi Password" styleClass="input-area" stylesheets="@../assets/css/style.css">
                <VBox.margin>
                   <Insets bottom="4.0" />
                </VBox.margin></PasswordField>
-            <Button fx:id="btnSelesaiDaftar" alignment="CENTER" mnemonicParsing="false" onAction="#handleClick" prefHeight="28.0" prefWidth="203.0" style="-fx-border-radius: 50%;" styleClass="button-success" stylesheets="@../assets/css/style.css" text="Daftar">
+            <Button fx:id="btnSelesaiDaftar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClick" prefHeight="28.0" prefWidth="203.0" style="-fx-border-radius: 50%;" styleClass="button-success" stylesheets="@../assets/css/style.css" text="Daftar">
                <VBox.margin>
-                  <Insets top="16.0" />
+                  <Insets left="15.0" top="16.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleClick" prefHeight="26.0" prefWidth="192.0" stylesheets="@../assets/css/style.css" text="Kembali Ke Login">
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleClick" prefHeight="26.0" prefWidth="206.0" stylesheets="@../assets/css/style.css" text="Kembali Ke Login">
                <VBox.margin>
-                  <Insets top="16.0" />
+                  <Insets left="15.0" top="16.0" />
                </VBox.margin>
             </Button>
          </children>

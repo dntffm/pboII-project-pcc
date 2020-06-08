@@ -106,23 +106,6 @@
         </VBox>
         <StackPane layoutX="270.0" prefHeight="576.0" prefWidth="780.0">
             <children>
-                <Pane fx:id="panePelayanan" prefHeight="576.0" prefWidth="541.0" style="-fx-background-color: white;">
-                    <children>
-                        <Label layoutX="50.0" layoutY="30.0" text="Pelayanan" textFill="#7f7d7d">
-                            <font>
-                                <Font size="28.0" />
-                            </font>
-                        </Label>
-                  <Pagination layoutX="50.0" layoutY="88.0" prefHeight="471.0" prefWidth="696.0" />
-                  <TableView layoutX="50.0" layoutY="70.0" prefHeight="439.0" prefWidth="681.0" style="-fx-background-color: white; -fx-border-color: #353535;">
-                     <columns>
-                        <TableColumn prefWidth="43.199981689453125" style="-fx-background-color: white;" text="#" />
-                        <TableColumn prefWidth="137.20001220703125" style="-fx-background-color: white;" text="Jenis Pelayanan" />
-                        <TableColumn prefWidth="201.79998779296875" style="-fx-background-color: white;" text="ID. Pelayanan" />
-                        <TableColumn prefWidth="296.59991455078125" style="-fx-background-color: white;" text="Status" />
-                     </columns>
-                  </TableView>
-                    </children></Pane>
                 <Pane fx:id="paneDashboard" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                     <children>
                         <Label layoutX="14.0" layoutY="38.0" text="Dashboard" textFill="#8a8383">
@@ -169,6 +152,23 @@
                         </Pane>
                      </children>
                   </GridPane>
+                    </children></Pane>
+                <Pane fx:id="panePelayanan" prefHeight="576.0" prefWidth="541.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="30.0" text="Pelayanan" textFill="#7f7d7d">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                  <Pagination layoutX="50.0" layoutY="88.0" prefHeight="471.0" prefWidth="696.0" />
+                  <TableView layoutX="50.0" layoutY="70.0" prefHeight="439.0" prefWidth="681.0" style="-fx-background-color: white; -fx-border-color: #353535;">
+                     <columns>
+                        <TableColumn prefWidth="43.199981689453125" style="-fx-background-color: white;" text="#" />
+                        <TableColumn prefWidth="137.20001220703125" style="-fx-background-color: white;" text="Jenis Pelayanan" />
+                        <TableColumn prefWidth="201.79998779296875" style="-fx-background-color: white;" text="ID. Pelayanan" />
+                        <TableColumn prefWidth="296.59991455078125" style="-fx-background-color: white;" text="Status" />
+                     </columns>
+                  </TableView>
                     </children></Pane>
             </children></StackPane>
     </children>

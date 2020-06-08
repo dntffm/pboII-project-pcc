@@ -3,13 +3,11 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CutomerController">
    <children>
       <VBox prefHeight="576.0" prefWidth="269.0" style="-fx-background-color: #204051;">
          <children>
@@ -166,106 +164,22 @@
                      </font>
                   </Label>
                </children></Pane>
-            <Pane fx:id="paneReportGangguan" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <Pane fx:id="paneDashboard" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="25.0" layoutY="41.0" text="Report Gangguan" textFill="#716d6d">
+                  <Label layoutX="14.0" layoutY="38.0" text="Dashboard" textFill="#8a8383">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <VBox layoutX="25.0" layoutY="105.0" prefHeight="440.0" prefWidth="190.0" style="-fx-background-color: milk;">
+                  <Pane layoutX="34.0" layoutY="88.0" prefHeight="76.0" prefWidth="696.0" style="-fx-background-color: #4ab0f0;">
                      <children>
-                        <Label text="Nama">
+                        <Label layoutX="59.0" layoutY="25.0" text="Selamat Datang User." textFill="WHITE">
                            <font>
-                              <Font size="17.0" />
+                              <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextArea prefHeight="19.0" prefWidth="190.0" />
-                        <Label layoutX="10.0" layoutY="10.0" text="Alamat">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <ChoiceBox prefWidth="150.0" />
-                        <Label layoutX="10.0" layoutY="74.0" text="Detail Gangguan">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="66.0" prefWidth="190.0" />
-                        <Button mnemonicParsing="false" stylesheets="@../assets/css/style.css" text="Kirim">
-                           <VBox.margin>
-                              <Insets top="34.0" />
-                           </VBox.margin>
-                        </Button>
                      </children>
-                  </VBox>
-               </children></Pane>
-            <Pane fx:id="panePasangBaru" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
-               <children>
-                  <Label layoutX="22.0" layoutY="39.0" text="Ajuan Pasang Baru" textFill="#797575">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Label>
-                  <VBox layoutX="41.0" layoutY="88.0" prefHeight="469.0" prefWidth="286.0">
-                     <children>
-                        <Label text="Nama Pemohon">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font></Label>
-                        <TextArea prefHeight="40.0" prefWidth="286.0" promptText="Nama Pemohon" stylesheets="@../assets/css/style.css">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <effect>
-                              <DropShadow blurType="GAUSSIAN" height="19.5" offsetX="3.0" offsetY="2.0" radius="9.625">
-                                 <color>
-                                    <Color red="0.5394737124443054" green="0.5304824709892273" blue="0.5304824709892273" />
-                                 </color>
-                              </DropShadow>
-                           </effect></TextArea>
-                        <Label layoutX="10.0" layoutY="10.0" text="Alamat Lengkap">
-                           <padding>
-                              <Insets top="7.0" />
-                           </padding>
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font></Label>
-                        <TextArea layoutX="10.0" layoutY="28.0" prefHeight="43.0" prefWidth="286.0" promptText="Alamat Lengkap" stylesheets="@../assets/css/style.css" />
-                        <Label layoutX="10.0" layoutY="71.0" text="No. HP / Telp">
-                           <padding>
-                              <Insets top="7.0" />
-                           </padding>
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font></Label>
-                        <TextArea layoutX="10.0" layoutY="88.0" prefHeight="43.0" prefWidth="286.0" promptText="No.HP / Telp" stylesheets="@../assets/css/style.css" />
-                        <Label layoutX="10.0" layoutY="71.0" text="Nomor Identitas (KTP/SIM)">
-                           <padding>
-                              <Insets top="7.0" />
-                           </padding>
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font></Label>
-                        <TextArea layoutX="10.0" layoutY="149.0" prefHeight="43.0" prefWidth="286.0" promptText="Nomor Identitas" stylesheets="@../assets/css/style.css" />
-                        <Label layoutX="10.0" layoutY="192.0" text="Email">
-                           <padding>
-                              <Insets top="7.0" />
-                           </padding>
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font></Label>
-                        <TextArea layoutX="10.0" layoutY="210.0" prefHeight="43.0" prefWidth="286.0" promptText="Email" stylesheets="@../assets/css/style.css" />
-                        <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="69.0" styleClass="button-success" stylesheets="@../assets/css/style.css" text="Selesai">
-                           <VBox.margin>
-                              <Insets top="11.0" />
-                           </VBox.margin>
-                           <effect>
-                              <DropShadow />
-                           </effect></Button>
-                     </children>
-                  </VBox>
+                  </Pane>
                </children></Pane>
             <Pane fx:id="panePenyesuaianDaya" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
@@ -274,106 +188,192 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <StackPane layoutX="2.0" layoutY="60.0" prefHeight="493.0" prefWidth="602.0">
+                  <AnchorPane layoutX="28.0" layoutY="68.0" prefHeight="493.0" prefWidth="574.0">
                      <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
+                        <StackPane prefHeight="493.0" prefWidth="602.0">
                            <children>
-                              <VBox layoutX="27.0" layoutY="12.0" prefHeight="469.0" prefWidth="286.0">
+                              <Pane prefHeight="493.0" prefWidth="644.0">
                                  <children>
-                                    <Label text="1. Isi Biodata">
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Nama Pemohon">
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <TextArea prefHeight="40.0" prefWidth="286.0" promptText="Nama Pemohon" stylesheets="@../assets/css/style.css">
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </TextArea>
-                                    <Label layoutX="10.0" layoutY="10.0" text="Alamat Lengkap">
-                                       <padding>
-                                          <Insets top="7.0" />
-                                       </padding>
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <TextArea layoutX="10.0" layoutY="28.0" prefHeight="43.0" prefWidth="286.0" promptText="Alamat Lengkap" stylesheets="@../assets/css/style.css" />
-                                    <Label layoutX="10.0" layoutY="71.0" text="No. HP / Telp">
-                                       <padding>
-                                          <Insets top="7.0" />
-                                       </padding>
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <TextArea layoutX="10.0" layoutY="88.0" prefHeight="43.0" prefWidth="286.0" promptText="No.HP / Telp" stylesheets="@../assets/css/style.css" />
-                                    <Label layoutX="10.0" layoutY="71.0" text="Nomor Identitas (KTP/SIM)">
-                                       <padding>
-                                          <Insets top="7.0" />
-                                       </padding>
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <TextArea layoutX="10.0" layoutY="149.0" prefHeight="43.0" prefWidth="286.0" promptText="Nomor Identitas" stylesheets="@../assets/css/style.css" />
-                                    <Label layoutX="10.0" layoutY="192.0" text="Email">
-                                       <padding>
-                                          <Insets top="7.0" />
-                                       </padding>
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <TextArea layoutX="10.0" layoutY="210.0" prefHeight="43.0" prefWidth="286.0" promptText="Email" stylesheets="@../assets/css/style.css" />
-                                    <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="82.0" styleClass="button-success" stylesheets="@../assets/css/style.css" text="Berikutnya">
-                                       <VBox.margin>
-                                          <Insets top="11.0" />
-                                       </VBox.margin>
-                                       <effect>
-                                          <DropShadow />
-                                       </effect>
-                                    </Button>
+                                    <VBox layoutX="383.0" layoutY="12.0" prefHeight="372.0" prefWidth="257.0">
+                                       <children>
+                                          <Label text="2. Pilih Perubahan Daya">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Daya Awal" />
+                                          <ChoiceBox prefHeight="38.0" prefWidth="185.0" stylesheets="@../assets/css/style.css" />
+                                          <Label layoutX="10.0" layoutY="28.0" text="Produk Layanan" />
+                                          <ChoiceBox layoutX="10.0" layoutY="45.0" prefHeight="43.0" prefWidth="155.0" stylesheets="@../assets/css/style.css" />
+                                          <Label layoutX="10.0" layoutY="71.0" text="Peruntukan" />
+                                          <ChoiceBox layoutX="10.0" layoutY="88.0" prefWidth="150.0" stylesheets="@../assets/css/style.css" />
+                                          <Label layoutX="10.0" layoutY="114.0" text="Daya Baru" />
+                                          <ChoiceBox layoutX="10.0" layoutY="132.0" prefWidth="190.0" stylesheets="@../assets/css/style.css" />
+                                          <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="71.0" stylesheets="@../assets/css/style.css" text="Selesai">
+                                             <VBox.margin>
+                                                <Insets top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="469.0" prefWidth="286.0">
+                                       <children>
+                                          <Label text="1. Isi Biodata">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Nama Pemohon">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea prefHeight="40.0" prefWidth="286.0" promptText="Nama Pemohon" stylesheets="@../assets/css/style.css">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <Label layoutX="10.0" layoutY="10.0" text="Alamat Lengkap">
+                                             <padding>
+                                                <Insets top="7.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea layoutX="10.0" layoutY="28.0" prefHeight="43.0" prefWidth="286.0" promptText="Alamat Lengkap" stylesheets="@../assets/css/style.css" />
+                                          <Label layoutX="10.0" layoutY="71.0" text="No. HP / Telp">
+                                             <padding>
+                                                <Insets top="7.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea layoutX="10.0" layoutY="88.0" prefHeight="43.0" prefWidth="286.0" promptText="No.HP / Telp" stylesheets="@../assets/css/style.css" />
+                                          <Label layoutX="10.0" layoutY="71.0" text="Nomor Identitas (KTP/SIM)">
+                                             <padding>
+                                                <Insets top="7.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea layoutX="10.0" layoutY="149.0" prefHeight="43.0" prefWidth="286.0" promptText="Nomor Identitas" stylesheets="@../assets/css/style.css" />
+                                       </children>
+                                    </VBox>
                                  </children>
-                              </VBox>
-                              <VBox layoutX="383.0" layoutY="12.0" prefHeight="372.0" prefWidth="190.0">
-                                 <children>
-                                    <Label text="2. Pilih Perubahan Daya">
-                                       <font>
-                                          <Font name="System Bold" size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Daya Awal" />
-                                    <ChoiceBox prefHeight="35.0" prefWidth="153.0" stylesheets="@../assets/css/style.css" />
-                                    <Label layoutX="10.0" layoutY="28.0" text="Produk Layanan" />
-                                    <ChoiceBox layoutX="10.0" layoutY="45.0" prefHeight="43.0" prefWidth="155.0" stylesheets="@../assets/css/style.css" />
-                                    <Label layoutX="10.0" layoutY="71.0" text="Peruntukan" />
-                                    <ChoiceBox layoutX="10.0" layoutY="88.0" prefWidth="150.0" stylesheets="@../assets/css/style.css" />
-                                    <Label layoutX="10.0" layoutY="114.0" text="Daya Baru" />
-                                    <ChoiceBox layoutX="10.0" layoutY="132.0" prefWidth="150.0" stylesheets="@../assets/css/style.css" />
-                                    <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="71.0" stylesheets="@../assets/css/style.css" text="Selesai">
-                                       <VBox.margin>
-                                          <Insets top="13.0" />
-                                       </VBox.margin></Button>
-                                 </children>
-                              </VBox>
+                              </Pane>
                            </children>
-                        </Pane>
+                        </StackPane>
                      </children>
-                  </StackPane>
+                  </AnchorPane>
                </children></Pane>
-            <Pane fx:id="paneDashboard" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+            <Pane fx:id="panePasangBaru" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="14.0" layoutY="38.0" text="Dashboard" textFill="#8a8383">
+                  <Label layoutX="22.0" layoutY="39.0" text="Ajuan Pasang Baru" textFill="#797575">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="42.0" layoutY="88.0" prefHeight="415.0" prefWidth="206.0">
+                     <children>
+                        <Label text="Nama Pemohon">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="35.0" prefWidth="209.0" promptText="Nama Pemohon" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Alamat Lengkap">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField layoutX="10.0" layoutY="27.0" prefHeight="35.0" prefWidth="209.0" promptText="Alamat Lengkap" />
+                        <Label layoutX="10.0" layoutY="68.0" text="No. HP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="10.0" layoutY="83.0" prefHeight="35.0" prefWidth="209.0" promptText="No. HP" />
+                        <Label layoutX="10.0" layoutY="62.0" text="Nomer Identitas (KTP/SIM)">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField layoutX="10.0" layoutY="79.0" prefHeight="35.0" prefWidth="209.0" promptText="Nomer Identitas" />
+                        <Label layoutX="10.0" layoutY="114.0" text="Daya Awal">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="chboxdayaawal" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: white; -fx-border-color: #454545;" />
+                        <Label layoutX="10.0" layoutY="166.0" text="Peruntukan">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ChoiceBox layoutX="10.0" layoutY="183.0" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: white; -fx-border-color: #454545;" />
+                        <Label layoutX="10.0" layoutY="240.0" text="Jenis Produk">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="10.0" layoutY="258.0" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: white; -fx-border-color: #454545;" />
+                        <Label layoutX="10.0" layoutY="324.0" text="Daya Baru">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="chboxdayabaru" layoutX="10.0" layoutY="342.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: white; -fx-border-color: #454545;" />
+                        <Button mnemonicParsing="false" stylesheets="@../assets/css/style.css" text="Ajukan">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></Pane>
+            <Pane fx:id="paneReportGangguan" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="25.0" layoutY="41.0" text="Report Gangguan" textFill="#716d6d">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
+                  <Label layoutX="21.0" layoutY="90.0" prefHeight="17.0" prefWidth="109.0" text="Lokasi Gangguan">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="txtfieldLokasiGangguan" layoutX="21.0" layoutY="114.0" promptText="Lokasi Gangguan" styleClass="input-area" />
+                  <Label layoutX="21.0" layoutY="211.0" prefHeight="17.0" prefWidth="109.0" text="Detail Gangguan">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtareaDetailGangguan" layoutX="21.0" layoutY="242.0" prefHeight="186.0" prefWidth="356.0" promptText="Isi Deskripsi Gangguan" stylesheets="@../assets/css/style.css" />
+                  <Button fx:id="btnKirimGangguan" layoutX="25.0" layoutY="439.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="34.0" prefWidth="70.0" stylesheets="@../assets/css/style.css" text="Kirim" />
+                  <Label layoutX="21.0" layoutY="151.0" prefHeight="17.0" prefWidth="109.0" text="Nama Pelapor">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtfieldLokasiGangguan1" layoutX="20.0" layoutY="179.0" promptText="Nama Pelapor" styleClass="input-area" />
                </children></Pane>
          </children></StackPane>
    </children>

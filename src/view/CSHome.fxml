@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CSController">
     <children>
-        <VBox prefHeight="576.0" prefWidth="269.0" style="-fx-background-color: #204051;">
+        <VBox prefHeight="576.0" prefWidth="269.0" style="-fx-background-color: #03518a;">
             <children>
                 <Pane prefHeight="34.0" prefWidth="270.0">
                     <children>
@@ -149,21 +149,6 @@
         </VBox>
         <StackPane layoutX="270.0" prefHeight="576.0" prefWidth="780.0">
             <children>
-                <Pane fx:id="paneNotifikasi" prefHeight="576.0" prefWidth="541.0" style="-fx-background-color: white;">
-                    <children>
-                        <ScrollPane layoutX="43.0" layoutY="147.0" prefHeight="372.0" prefWidth="696.0">
-                            <content>
-                                <VBox fx:id="vbPanelNotif" prefHeight="415.0" prefWidth="710.0" />
-                            </content>
-                        </ScrollPane>
-                        <Label layoutX="64.0" layoutY="117.0" text="Tanggal" />
-                        <Label layoutX="231.0" layoutY="117.0" text="Pesan" />
-                        <Label layoutX="50.0" layoutY="30.0" text="Notifikasi" textFill="#7f7d7d">
-                            <font>
-                                <Font size="28.0" />
-                            </font>
-                        </Label>
-                    </children></Pane>
                 <Pane fx:id="panePasangBaru" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                     <children>
                         <Label layoutX="22.0" layoutY="39.0" text="Ajuan Pasang Baru" textFill="#797575">
@@ -173,13 +158,38 @@
                         </Label>
                   <TableView layoutX="22.0" layoutY="113.0" prefHeight="424.0" prefWidth="718.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="#" />
-                      <TableColumn prefWidth="88.20001220703125" text="ID. Pemohon" />
-                        <TableColumn prefWidth="113.20001220703125" text="Jenis Layanan" />
+                      <TableColumn prefWidth="38.0" text="#" />
+                      <TableColumn prefWidth="112.0" text="Nama Pemohon" />
+                        <TableColumn prefWidth="128.0" text="Alamat" />
+                        <TableColumn prefWidth="102.0" text="Jumlah Daya" />
+                        <TableColumn prefWidth="93.0" text="Jenis Produk" />
+                        <TableColumn prefWidth="75.0" text="No. HP" />
+                        <TableColumn prefWidth="75.0" text="Email" />
                         <TableColumn prefWidth="75.0" text="Status" />
                     </columns>
                   </TableView>
                     </children></Pane>
+                <Pane fx:id="panePenyesuaianDaya" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="27.0" layoutY="41.0" text="Ajuan Penyesuaian Daya" textFill="#616161">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                  <TableView layoutX="35.0" layoutY="96.0" prefHeight="384.0" prefWidth="671.0">
+                    <columns>
+                      <TableColumn prefWidth="46.199981689453125" text="#" />
+                      <TableColumn prefWidth="95.79998779296875" text="Nama Pemohon" />
+                        <TableColumn prefWidth="101.0" text="Alamat" />
+                        <TableColumn prefWidth="85.79998779296875" text="Jumlah Daya" />
+                        <TableColumn prefWidth="107.79998779296875" text="Jenis Produk" />
+                        <TableColumn prefWidth="75.0" text="No.Hp" />
+                        <TableColumn prefWidth="64.199951171875" text="Email" />
+                        <TableColumn prefWidth="86.2000732421875" text="Status" />
+                    </columns>
+                  </TableView>
+                    </children>
+            </Pane>
                 <Pane fx:id="paneReportGangguan" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                     <children>
                         <Label layoutX="25.0" layoutY="41.0" text="Daftar Laporan Gangguan" textFill="#716d6d">
@@ -191,23 +201,9 @@
                     <columns>
                       <TableColumn prefWidth="41.199981689453125" text="#" />
                       <TableColumn prefWidth="109.20001220703125" text="Tanggal" />
-                        <TableColumn prefWidth="75.0" text="ID. Pelapor" />
-                        <TableColumn prefWidth="329.20001220703125" text="Deskripsi Laporan" />
-                    </columns>
-                  </TableView>
-                    </children></Pane>
-                <Pane fx:id="panePenyesuaianDaya" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
-                    <children>
-                        <Label layoutX="27.0" layoutY="41.0" text="Ajuan Penyesuaian Daya" textFill="#616161">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Label>
-                  <Pagination layoutX="35.0" layoutY="96.0" prefHeight="469.0" prefWidth="718.0" />
-                  <TableView layoutX="35.0" layoutY="96.0" prefHeight="384.0" prefWidth="646.0">
-                    <columns>
-                      <TableColumn prefWidth="46.199981689453125" text="#" />
-                      <TableColumn prefWidth="104.19998168945312" text="ID. Pemohon" />
+                        <TableColumn prefWidth="90.19992065429688" text="Nama Pelapor" />
+                        <TableColumn prefWidth="233.20001220703125" text="Lokasi Gangguan" />
+                        <TableColumn prefWidth="231.0" text="Detail Laporan" />
                     </columns>
                   </TableView>
                     </children></Pane>
@@ -231,7 +227,7 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #532fe2;">
                            <children>
-                              <Label layoutX="180.0" layoutY="14.0" text="20 Ajuan Baru" textFill="WHITE">
+                              <Label layoutX="163.0" layoutY="14.0" text="20 Ajuan Baru" textFill="WHITE">
                                  <font>
                                     <Font size="26.0" />
                                  </font>
@@ -240,6 +236,27 @@
                         </Pane>
                      </children>
                   </GridPane>
+                    </children></Pane>
+                <Pane fx:id="paneNotifikasi" prefHeight="576.0" prefWidth="541.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="50.0" layoutY="30.0" text="Notifikasi" textFill="#7f7d7d">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                  <TextArea layoutX="50.0" layoutY="192.0" prefHeight="248.0" prefWidth="369.0" promptText="Tulis Pesan" />
+                  <Button layoutX="50.0" layoutY="453.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="63.0" stylesheets="@../assets/css/style.css" text="Kirim" />
+                  <Label layoutX="50.0" layoutY="157.0" text="Pesan Notifikasi">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="85.0" text="Tujuan">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="50.0" layoutY="121.0" prefWidth="150.0" />
                     </children></Pane>
             </children></StackPane>
     </children>

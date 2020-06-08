@@ -1,22 +1,25 @@
 package controller;
 
 import java.net.URL;
+import java.sql.*;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+import models.Signup_model;
 public class LoginController {
-
+    private static double x,y;
     @FXML
     private ResourceBundle resources;
+
+    @FXML
+    private VBox vboxRegister;
 
     @FXML
     private URL location;
@@ -34,21 +37,42 @@ public class LoginController {
 
     @FXML
     private Button btnDaftar;
-    Stage stage;
-
-
+    Stage stage = new Stage();
+    Scene scene;
     @FXML
     void handleClick(ActionEvent event) {
         if (event.getSource() == btnLogin){
-            if (txtareaUsername.getText().equals("user") && txtareaPassword.getText().equals("123")){
-               Helper.changePage(event,"CustomerHome");
+            if (txtareaUsername.getText().isEmpty()){
+                Helper.showAlert(Alert.AlertType.ERROR , "Login Error", "Username Harus Tidak Kosong");
             }
-            if (txtareaUsername.getText().equals("cs") && txtareaPassword.getText().equals("123")){
-                Helper.changePage(event,"CSHome");
+            if (txtareaPassword.getText().isEmpty()){
+                Helper.showAlert(Alert.AlertType.ERROR , "Login Error", "Password Harus Tidak Kosong");
             }
-            if (txtareaUsername.getText().equals("teknisi") && txtareaPassword.getText().equals("123")){
-                Helper.changePage(event,"CustomerHome");
+
+
+            String username = txtareaUsername.getText().toString();
+            String password = txtareaPassword.getText().toString();
+
+            ResultSet resultSet = Signup_model.cekUser(username,password);
+            try {
+                if(!resultSet.next()){
+                    Helper.showAlert(Alert.AlertType.ERROR , "Login Error", "Username atau password salah");
+                }else{
+                    if (resultSet.getString(5).equals("teknisi")){
+                        Helper.changePage(event,"TeknisiHome");
+                    } else if (resultSet.getString(5).equals("customer")){
+                        Helper.changePage(event,"CustomerHome");
+                    } else if (resultSet.getString(5).equals("customer_service")){
+                        Helper.changePage(event,"CSHome");
+                    } else{
+                        Helper.showAlert(Alert.AlertType.ERROR, "Login Eror","Login Gagal");
+                    }
+                }
+            } catch (SQLException e){
+                System.out.println("Data Tidak Ada");
             }
+
+
 
         }
         if(event.getSource() == btnDaftar){
@@ -58,9 +82,9 @@ public class LoginController {
             stage = (Stage)((Button)event.getSource()).getScene().getWindow();
             stage.close();
         }
-
-
     }
+
+
 
     @FXML
     void initialize() {
